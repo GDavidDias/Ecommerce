@@ -1,0 +1,29 @@
+.container{
+    border: 1px solid red;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.containerTop{
+    border: 1px solid blue;
+    height: 10vh;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.containerBottom{
+    border: 1px solid green;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    border: 1px solid goldenrod;
+    background-color: peachpuff;
+    width: 70vw;
+}
+.right{
+    border: 1px solid violet;
+    background-color: pink;
+    width: 30vw;
+}

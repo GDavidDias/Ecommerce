@@ -1,0 +1,34 @@
+{
+    "products":[
+        {"id":1,
+            "image":"image1",
+            "title":"zapatos",
+            "description":"zapatos negros de cuero"
+        },
+        {"id":2,
+            "image":"image2",
+            "title":"remera",
+            "description":"remera de los simpsons"
+        },
+        {"id":3,
+            "image":"image3",
+            "title":"pantalon",
+            "description":"pantalon roto"
+        },
+        {"id":4,
+            "image":"image1",
+            "title":"camisa",
+            "description":"camisa manga larga"
+        },
+        {"id":5,
+            "image":"image2",
+            "title":"medias",
+            "description":"medias de vestir azul"
+        },
+        {"id":6,
+            "image":"image3",
+            "title":"mochila",
+            "description":"mochila campestre para notebook"
+        }
+    ]
+}

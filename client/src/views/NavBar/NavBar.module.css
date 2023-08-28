@@ -1,0 +1,23 @@
+.container{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    min-height: 10vh;
+    align-items: center;
+    
+}
+.logo{
+    width: 10vw;
+    text-align: -webkit-center;
+}
+.searchBar{
+    width: 70vw;
+}
+.cart{
+    width: 20vw;
+    text-align: -webkit-center;
+}
+.iconCart{
+    font-size: 2rem;
+    color: cadetblue;
+}
