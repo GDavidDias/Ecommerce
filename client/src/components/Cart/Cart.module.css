@@ -26,4 +26,33 @@
     border: 1px solid violet;
     background-color: pink;
     width: 30vw;
+    padding: 2rem;
+}
+.resumeTitle h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.resumeProduct{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.resumeProduct h3{
+    padding-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+.resumeOtros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.resumeTotal{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
