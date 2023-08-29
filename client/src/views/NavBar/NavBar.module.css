@@ -14,10 +14,18 @@
     width: 70vw;
 }
 .cart{
-    width: 20vw;
+    width: 10vw;
     text-align: -webkit-center;
 }
 .iconCart{
+    font-size: 2rem;
+    color: cadetblue;
+}
+.list{
+    width: 10vw;
+    text-align: -webkit-center;
+}
+.iconList{
     font-size: 2rem;
     color: cadetblue;
 }

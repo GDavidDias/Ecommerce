@@ -20,10 +20,7 @@ const ListProducts = () => {
                     productSG?.map((product,index)=>(
                         <ProductCard 
                             key={index}
-                            id={product.id} 
-                            image={product.image}
-                            title={product.title}
-                            description={product.description}
+                            data = {product}
                         />
                     ))
                 }

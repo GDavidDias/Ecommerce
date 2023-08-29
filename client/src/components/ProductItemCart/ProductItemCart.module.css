@@ -1,0 +1,67 @@
+.container{
+    border: 1px solid red;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+.image{
+    border: 1px solid blue;
+    width: 20%;
+}
+.info{
+    border: 1px solid green;
+    width: 50%;
+    padding: 5px;
+}
+.titleInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.actionLink{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.buttonAction{
+    border: 1px solid gray;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.subtotal{
+    border: 1px solid orchid;
+    width: 30%;
+}
+.cantidad{
+    display: flex;
+    flex-direction: row;
+}
+.iconSuma{
+    border: 1px solid blue;
+    width: 25%;
+    text-align: center;
+}
+.count{
+    border: 1px solid blue;
+    width: 50%;
+    text-align: center;
+}
+.iconResta{
+    border: 1px solid blue;
+    width: 25%;
+    text-align: center;
+}
+.buttons{
+    border: 1px solid black;
+    width: 3vw;
+    background-color: lightcoral;
+}
+.monto{
+    border: 1px solid grey;
+    text-align: center;
+}

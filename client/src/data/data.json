@@ -3,32 +3,38 @@
         {"id":1,
             "image":"image1",
             "title":"zapatos",
-            "description":"zapatos negros de cuero"
+            "description":"zapatos negros de cuero",
+            "price":"25000"
         },
         {"id":2,
             "image":"image2",
             "title":"remera",
-            "description":"remera de los simpsons"
+            "description":"remera de los simpsons",
+            "price":"25000"
         },
         {"id":3,
             "image":"image3",
             "title":"pantalon",
-            "description":"pantalon roto"
+            "description":"pantalon roto",
+            "price":"25000"
         },
         {"id":4,
             "image":"image1",
             "title":"camisa",
-            "description":"camisa manga larga"
+            "description":"camisa manga larga",
+            "price":"25000"
         },
         {"id":5,
             "image":"image2",
             "title":"medias",
-            "description":"medias de vestir azul"
+            "description":"medias de vestir azul",
+            "price":"25000"
         },
         {"id":6,
             "image":"image3",
             "title":"mochila",
-            "description":"mochila campestre para notebook"
+            "description":"mochila campestre para notebook",
+            "price":"25000"
         }
     ]
 }
