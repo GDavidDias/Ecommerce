@@ -10,9 +10,9 @@ export const productSlice = createSlice({
     reducers:{
         addProducts:(state,action)=>{
             const {products} = action.payload;
-            // console.log('que tiene products en Slice: ',action.payload);
+            console.log('que tiene products en Slice: ',action.payload);
             // console.log('que tiene products: ',products)
-            state.listProducts = products;
+            state.listProducts = action.payload;
         },
     },
 });

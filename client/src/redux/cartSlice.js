@@ -41,6 +41,9 @@ export const cartSlice = createSlice({
         removeCart:(state,action)=>{
             const{id}=action.payload;
             state.cart = state.cart.filter(product=>product.id!==id);
+        },
+        clearCart:(state,action)=>{
+            state.cart=[];
         }
     }
 });
@@ -50,7 +53,7 @@ export const findProductCart = (state,id)=>{
     return findProduct ?findProduct :false
 };
 
-export const {addCart,substractCart,removeCart} = cartSlice.actions;
+export const {addCart,substractCart,removeCart,clearCart} = cartSlice.actions;
 export default cartSlice.reducer;
 
 

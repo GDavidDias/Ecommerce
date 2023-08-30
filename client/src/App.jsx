@@ -1,9 +1,10 @@
 import dataJson from './data/data.json';
-
+import axios from 'axios';
 import { addProducts } from './redux/productSlice';
 import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Home from './views/Home/Home'
+const URL = 'http://localhost:3001';
 
 
 function App() {
@@ -11,9 +12,13 @@ function App() {
   useEffect(()=>{
     const fetchdata = async () =>{
       try{
-        const response = dataJson;
-        console.log('que tiene response: ', response)
-        dispatch(addProducts(response));
+        // const response = dataJson;
+        // console.log('que tiene response: ', response)
+        // dispatch(addProducts(response));
+        const {data} = await axios.get(`${URL}/products`);
+        console.log("que tiene data: ", data)
+        dispatch(addProducts(data));
+
       }catch(error){
         console.log('error al cargar datos: ', error.message)
       }

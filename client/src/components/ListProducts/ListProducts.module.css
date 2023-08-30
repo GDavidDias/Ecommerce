@@ -4,4 +4,6 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1.5rem;
+    background-color: #F2F2F2;
+    height: 80vh;
 }

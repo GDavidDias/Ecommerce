@@ -2,14 +2,14 @@ body{
     margin: 0;
 }
 .navBar{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 10vh;
 }
 .body{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 80vh;
 }
 .footer{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 9vh;
 }

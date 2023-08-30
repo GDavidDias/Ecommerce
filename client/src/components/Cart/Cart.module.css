@@ -56,3 +56,12 @@
     font-size: 1.3rem;
     font-weight: 600;
 }
+.clear{
+    padding-top: 1rem;
+}
+.clear button{
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
+}

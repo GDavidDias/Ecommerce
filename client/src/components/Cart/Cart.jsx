@@ -1,7 +1,8 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import style from './Cart.module.css';
 import { useEffect, useState } from 'react';
 import ProductItemCart from '../ProductItemCart/ProductItemCart';
+import { clearCart } from '../../redux/cartSlice';
 
 const Cart = () =>{
     const cartSG = useSelector((state)=>state.cart.cart);
@@ -18,6 +19,11 @@ const Cart = () =>{
         setQuantity(count);
         setAmount(amount);
     };
+    const dispatch=useDispatch();
+
+    const handleclearCart=()=>{
+        dispatch(clearCart());
+    }
 
     useEffect(()=>{
         console.log("que tiene cartSG: ",cartSG);
@@ -60,7 +66,6 @@ const Cart = () =>{
                             <div>
                                 {`$0`}
                             </div>
-
                         </div>
                         <div className={style.resumeTotal}>
                             <div>
@@ -69,6 +74,9 @@ const Cart = () =>{
                             <div>
                                 {`$${amount}`}
                             </div>
+                        </div>
+                        <div className={style.clear}>
+                            <button onClick={()=>handleclearCart()}>Vaciar Carrito</button>
                         </div>
                     </div>
                 </div>

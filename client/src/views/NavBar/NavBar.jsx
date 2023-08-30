@@ -1,6 +1,7 @@
 import style from './NavBar.module.css';
 import {FaShoppingCart,FaList} from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png'
 
 const NavBar = () => {
     
@@ -8,7 +9,7 @@ const NavBar = () => {
         <>
             <div className={style.container}>
                 <div className={style.logo}>
-                    <h1>logo</h1>
+                    <img src={logo}/>
                 </div>
                 <div className={style.searchBar}>
                     <h1>searchbar</h1>
