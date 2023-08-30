@@ -4,7 +4,7 @@
     flex-direction: row;
     min-height: 10vh;
     align-items: center;
-    
+    padding: 0rem 1.5rem;
 }
 .logo{
     width: 10vw;
@@ -12,20 +12,29 @@
 }
 .searchBar{
     width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 .cart{
     width: 10vw;
     text-align: -webkit-center;
 }
-.iconCart{
-    font-size: 2rem;
-    color: #4BF286;
-}
 .list{
     width: 10vw;
     text-align: -webkit-center;
 }
-.iconList{
-    font-size: 2rem;
-    color: #4BF286;
+.icon{
+    font-size: 1.5rem;
+    color: #F2F2F2;
 }
+.icon :hover{
+    color: #F2E313;
+}
+.input{
+    width: 20rem;
+    height: 2rem;
+}
+
