@@ -27,6 +27,7 @@ const ProductItemCart = ({dataProduct}) =>{
         <div>
             <div className={style.container}>
                 <div className={style.image}>
+                    <img src={image}/>
                 </div>
                 <div className={style.info}>
                     <div className={style.titleInfo}>

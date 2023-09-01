@@ -1,32 +1,41 @@
 .container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 80vh;
     display: flex;
     flex-direction: column;
+    background-color: #F2F2F2;
+    padding: 1.5rem;
 }
 .containerTop{
-    border: 1px solid blue;
-    height: 10vh;
-    text-align: center;
+    display: flex;
+    /* border: 1px solid blue; */
+    /* height: 10vh; */
     font-size: 2rem;
     font-weight: 600;
+    align-items: center;
+    justify-content: center;
 }
 .containerBottom{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 70vh;
     display: flex;
     flex-direction: row;
 }
 .left{
-    border: 1px solid goldenrod;
-    background-color: peachpuff;
+    /* border: 1px solid goldenrod; */
     width: 70vw;
+    padding: 1rem;
 }
 .right{
-    border: 1px solid violet;
-    background-color: pink;
+    /* border: 1px solid violet; */
     width: 30vw;
-    padding: 2rem;
+    padding: 1rem;
+}
+.containerResume{
+    border: 1px solid rgb(148 163 184);
+    padding: 5px 10px;
+    /* background: linear-gradient(to bottom, #ffcc00, #ff6600); */
+    background: linear-gradient(45deg, white, #F2F2F2,white);
 }
 .resumeTitle h1{
     font-size: 1.5rem;
@@ -64,4 +73,7 @@
     background-color: cornflowerblue;
     color: white;
     font-weight: 600;
+}
+.clear button:hover{
+    background-color: #F2622E;
 }
