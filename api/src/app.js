@@ -1,6 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
+const{ TOKEN_MP } = process.env;
+const cors = require('cors'); //?AGREGO POR MERCADOPAGO
+const mercadopago = require('mercadopago'); //?AGREGO POR MERCADOPAGO
 
 require('./db.js');
 
@@ -10,6 +13,8 @@ server.name='API';
 
 //!Configuramos los middlewares - los filtros de las request
 server.use(morgan('dev'));
+server.use(express.json()); //?AGREGO POR MERCADOPAGO
+server.use(cors()); //?AGREGO POR MERCADOPAGO
 server.use((req,res,next)=>{
     res.header('Access-Control-Allow-Origin', 'http://localhost:3001'); // update to match the domain you will make the request from
     res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
@@ -20,6 +25,11 @@ server.use((req,res,next)=>{
 });
 
 server.use('/', routes);
+
+//?AGREGO POR MERCADOPAGO
+mercadopago.configure({
+  access_token:TOKEN_MP
+});
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars

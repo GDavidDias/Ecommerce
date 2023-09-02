@@ -1,8 +1,16 @@
 import { useDispatch } from 'react-redux';
 import style from './ProductCard.module.css';
 import { addCart } from '../../redux/cartSlice';
+import axios from 'axios';
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';//?AGREGO POR MERCADOPAGO
+import { useState } from 'react';
+const URL = 'http://localhost:3001';
+
 
 const ProductCard = ({data}) =>{
+    const[preferenceId, setPreferenceId] = useState(null); //?AGREGO POR MERCADOPAGO
+    initMercadoPago('TEST-266d467d-bcd2-4992-a465-7b7ab11e048a'); //?AGREGO POR MERCADOPAGO
+
     const {id,image,title,description,price} = data;
     // console.log('que tiene prop product: ', product)
     // console.log('que tiene prop product.title: ', product.product.title)
@@ -11,7 +19,33 @@ const ProductCard = ({data}) =>{
     const addProductCart = (data) =>{
         console.log('que tiene data: ',data);
         dispatch(addCart(data));
+    };
 
+    const createPreference = async (title,price) =>{
+        console.log('que tiene title: ', title)
+        console.log('que tiene price: ', price)
+        
+        try{
+            const response = await axios.post(`${URL}/create_preference`,{
+                title: title,
+                price: price,
+                quantity: 1,
+                currency_id: 'ARS',
+            });
+            const{id}=response.data;
+            return id;
+
+        }catch(error){
+            console.log('error en createPreference: ',error.message);
+        }
+    };
+
+    const handleBuy = async(data) =>{
+        const{title,price} = data;
+        const id = await createPreference(title,price);
+        if(id){
+            setPreferenceId(id);
+        }
     }
 
     return(
@@ -26,8 +60,17 @@ const ProductCard = ({data}) =>{
                     <h3 className='text-left text-sm'>{description}</h3>
                 </div>
                 <div className='flex flex-row gap-3 pb-2 px-2'>
-                    <button className='bg-orange hover:bg-blue text-white font-bold w-24 h-8'>Comprar</button>
-                    <button className='bg-orange hover:bg-blue text-white font-bold w-24 h-8' onClick={()=>addProductCart(data)}>Agregar</button>
+                    <button 
+                        className='bg-orange hover:bg-blue text-white font-bold w-24 h-8'
+                        onClick={()=>handleBuy(data)}
+                    >Comprar</button>
+                    {
+                        preferenceId && <Wallet initialization={{preferenceId}}/>
+                    }
+                    <button 
+                        className='bg-orange hover:bg-blue text-white font-bold w-24 h-8' 
+                        onClick={()=>addProductCart(data)}
+                    >Agregar</button>
                 </div>
             </div>
         </>

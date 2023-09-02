@@ -4,37 +4,37 @@
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"zapatos",
             "description":"zapatos negros de cuero",
-            "price":"37500"
+            "price":"3.7"
         },
         {
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"remera",
             "description":"remera de los simpsons",
-            "price":"7000"
+            "price":"7"
         },
         {
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"pantalon",
             "description":"pantalon roto",
-            "price":"18000"
+            "price":"1.8"
         },
         {
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"camisa",
             "description":"camisa manga larga",
-            "price":"8900"
+            "price":"8.9"
         },
         {
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"medias",
             "description":"medias de vestir azul",
-            "price":"800"
+            "price":"8"
         },
         {
             "image":"https://cdn-icons-png.flaticon.com/512/1493/1493693.png",
             "title":"mochila",
             "description":"mochila campestre para notebook",
-            "price":"46800"
+            "price":"4.6"
         }
     ]
 }

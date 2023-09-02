@@ -37,6 +37,7 @@
 .input{
     width: 20rem;
     height: 2rem;
+    padding-left: 10px;
 }
 .inputClear{
     height: 2rem;

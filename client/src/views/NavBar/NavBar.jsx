@@ -64,6 +64,7 @@ const NavBar = () => {
                         className={style.input}
                         onChange={handleInput}
                         value={input}
+                        placeholder='buscar producto ...'
                     />
                     <button
                         className={style.inputClear}
