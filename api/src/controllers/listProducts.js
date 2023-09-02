@@ -5,11 +5,11 @@ const {Products} = require('../db.js');
 
 
 const listProducts = async function(req,res){
-    console.log('ingresa a listProducts');
+    // console.log('ingresa a listProducts');
     try{
         let resp;
         resp = await require('../data/data.json');
-        console.log("que trae resp :",resp.products);
+        // console.log("que trae resp :",resp.products);
 
         let cantidadRegistros = await Products.count();
         let allProducts;

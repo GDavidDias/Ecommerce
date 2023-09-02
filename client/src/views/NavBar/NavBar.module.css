@@ -16,7 +16,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    /* gap: 15px; */
 }
 .cart{
     width: 10vw;
@@ -29,6 +29,7 @@
 .icon{
     font-size: 1.5rem;
     color: #F2F2F2;
+    margin-left: 15px;
 }
 .icon :hover{
     color: #F2E313;
@@ -37,4 +38,8 @@
     width: 20rem;
     height: 2rem;
 }
-
+.inputClear{
+    height: 2rem;
+    width: 2rem;
+    background-color: #F2F2F2;
+}

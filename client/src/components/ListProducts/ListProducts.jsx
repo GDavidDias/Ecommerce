@@ -6,7 +6,7 @@ import style from './ListProducts.module.css'
 
 const ListProducts = () => {
 
-    const productSG = useSelector((state)=>state.products.listProducts);
+    const productSG = useSelector((state)=>state.products.filterProducts);
 
     useEffect(()=>{
         console.log('que tiene productSG: ',productSG);

@@ -1,7 +1,8 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    listProducts:[]
+    listProducts:[],
+    filterProducts:[]
 };
 
 export const productSlice = createSlice({
@@ -9,13 +10,24 @@ export const productSlice = createSlice({
     initialState,
     reducers:{
         addProducts:(state,action)=>{
-            const {products} = action.payload;
             console.log('que tiene products en Slice: ',action.payload);
             // console.log('que tiene products: ',products)
+            state.filterProducts = action.payload;
             state.listProducts = action.payload;
         },
+        foundProducts:(state,action)=>{
+            console.log('que trae action <search> Slice: ', action.payload);
+            state.filterProducts = action.payload;
+            
+        },
+        initialFilterProducts:(state,action)=>{
+            state.filterProducts = state.listProducts;
+        }
     },
 });
 
-export const {addProducts} = productSlice.actions;
+
+
+
+export const {addProducts,foundProducts,initialFilterProducts} = productSlice.actions;
 export default productSlice.reducer;
