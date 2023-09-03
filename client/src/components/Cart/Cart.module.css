@@ -64,10 +64,16 @@
     justify-content: space-between;
     font-size: 1.3rem;
     font-weight: 600;
+    align-items: center;
 }
-.clear{
+
+.resumeButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     padding-top: 1rem;
 }
+
 .clear button{
     padding: 5px;
     background-color: cornflowerblue;
@@ -76,4 +82,40 @@
 }
 .clear button:hover{
     background-color: #F2622E;
+}
+.comprar button{
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
+}
+.comprar button:hover{
+    background-color: #F2622E;
+}
+.modal h1{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.modal h3{
+    font-size: 1.2rem;
+}
+.modal li{
+    font-style: italic;
+    padding-left: 1rem;
+}
+.modal img{
+    width: 50px;
+    height: 50px;
+}
+.modalDescription{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.modalDescription h3{
+    font-size: 1.1rem;
+    font-style: italic;
 }

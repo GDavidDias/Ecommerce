@@ -36,7 +36,7 @@ const ProductItemCart = ({dataProduct}) =>{
                     </div>
                     <h3>{description}</h3>
                     <div className={style.actionLink}>
-                        <button className={style.buttonAction}>Comprar Ahora</button>
+                        {/* <button className={style.buttonAction}>Comprar Ahora</button> */}
                         <button className={style.buttonAction} onClick={()=>removeProduct(id)}>Eliminar</button>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const ProductItemCart = ({dataProduct}) =>{
                     </div>
                     <div className={style.monto}>
                         <h1>Subtotal:</h1>
-                        <h1>{`$ ${count*price}`}</h1>
+                        <h1>{`$ ${parseFloat((count*price).toFixed(2))}`}</h1>
                     </div>
 
                 </div>
