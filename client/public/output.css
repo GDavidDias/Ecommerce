@@ -827,3 +827,6 @@ video {
 .leading-4{
   line-height: 1rem; /* 16px */
 }
+.cursor-pointer{
+  cursor: pointer;
+}

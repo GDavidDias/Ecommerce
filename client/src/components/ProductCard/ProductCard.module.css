@@ -4,6 +4,7 @@
     height: 10rem;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .containerImage img{
     position: absolute;

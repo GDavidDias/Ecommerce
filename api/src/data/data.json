@@ -35,6 +35,12 @@
             "title":"mochila notebook",
             "description":"mochila de tela para notebook",
             "price":"4.6"
+        },
+        {
+            "image":"https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "title":"gorra gris",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia veniam iusto, odit esse rem hic voluptas dolorum velit qui ea cum assumenda tenetur, est fugiat fuga!",
+            "price":"2.5"
         }
     ]
 }
