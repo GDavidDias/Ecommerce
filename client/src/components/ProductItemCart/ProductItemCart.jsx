@@ -34,7 +34,9 @@ const ProductItemCart = ({dataProduct}) =>{
                         <h1>{title}</h1>
                         <h1>{`$ ${price}`}</h1>
                     </div>
-                    <h3>{description}</h3>
+                    <div className={style.descriptionContainer}>
+                        <h3>{description}</h3>
+                    </div>
                     <div className={style.actionLink}>
                         {/* <button className={style.buttonAction}>Comprar Ahora</button> */}
                         <button className={style.buttonAction} onClick={()=>removeProduct(id)}>Eliminar</button>

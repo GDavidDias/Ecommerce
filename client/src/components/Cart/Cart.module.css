@@ -25,6 +25,7 @@
     /* border: 1px solid goldenrod; */
     width: 70vw;
     padding: 1rem;
+    overflow-y: auto;
 }
 .right{
     /* border: 1px solid violet; */
@@ -72,6 +73,7 @@
     flex-direction: row;
     justify-content: space-around;
     padding-top: 1rem;
+    gap: 5px;
 }
 
 .clear button{
@@ -114,8 +116,28 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    margin-bottom: 5px;
 }
 .modalDescription h3{
     font-size: 1.1rem;
     font-style: italic;
+}
+.iconContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.icon{
+    font-size: 3rem;
+}
+.buttonCenter{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.buttonCenter button{
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
 }

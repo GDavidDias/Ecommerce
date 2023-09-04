@@ -60,17 +60,14 @@ const ProductCard = ({data}) =>{
                 <div className={style.containerImage}>
                     <img src={image}/>
                 </div>
-                <h1 className='text-lg font-bold text-center'>{`${title} $${price}`}</h1>
-                <div className='pl-2 pr-2 w-48 h-16'>
-                    <h3 className='text-left text-sm'>{description}</h3>
+                <h1 className='text-lg font-bold text-center truncate'>{`${title}`}</h1>
+                <div className='max-w-xxs  overflow-hidden pl-2 pr-2 w-48 h-5'>
+                    <h3 className='leading-4 text-left text-sm truncate'>{description}</h3>
                 </div>
-
+                <div>
+                    <h1 className='text-base font-bold text-center'>{`$${price}`}</h1>
+                </div>
                 <div className='flex flex-row gap-3 pb-2 px-2'>
-                    {/* <button 
-                        className='bg-orange hover:bg-blue text-white font-bold w-24 h-8'
-                        onClick={()=>handleBuy(data)}
-                    >Comprar</button> */}
-
                     <button 
                         className='bg-orange hover:bg-blue text-white font-bold w-40 h-8' 
                         onClick={()=>addProductCart(data)}

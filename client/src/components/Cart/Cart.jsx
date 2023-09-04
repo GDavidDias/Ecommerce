@@ -3,16 +3,19 @@ import style from './Cart.module.css';
 import { useEffect, useState } from 'react';
 import ProductItemCart from '../ProductItemCart/ProductItemCart';
 import { clearCart } from '../../redux/cartSlice';
+import {FaCartArrowDown} from 'react-icons/fa';
 
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';//?AGREGO POR MERCADOPAGO
 import Modal from '../Modal/Modal';
 import { useModal } from '../../hooks/useModal';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 const URL = 'http://localhost:3001';
 
 const Cart = () =>{
 
     const[isOpenModalBuy, openModalBuy, closeModalBuy]=useModal(false);
+    const[isOpenModalEmptyCar, openModalEmptyCar, closeModalEmptyCar]=useModal(false);
 
     const[preferenceId, setPreferenceId] = useState(null); //?AGREGO POR MERCADOPAGO
     initMercadoPago('TEST-266d467d-bcd2-4992-a465-7b7ab11e048a'); //?AGREGO POR MERCADOPAGO
@@ -59,11 +62,14 @@ const Cart = () =>{
 
     const handleBuy = async(data) =>{
         const{title,price} = data;
-        openModalBuy();
-        const id = await createPreference(title,price);
-        if(id){
-            setPreferenceId(id);
+        if(price!==0){
+            openModalBuy();
+            const id = await createPreference(title,price);
+            if(id){ setPreferenceId(id)}
+        }else{
+            openModalEmptyCar();
         }
+        
     };
 
     useEffect(()=>{
@@ -135,6 +141,19 @@ const Cart = () =>{
                 </div>
 
             </div>
+            <Modal isOpen={isOpenModalEmptyCar} closeModal={closeModalEmptyCar}>
+                <div className={style.modal}>
+                    <h1>Carrito Vacio!</h1>
+                    <div className={style.iconContainer}>
+                        <FaCartArrowDown className={style.icon}/>
+                    </div>
+                    <div className={style.buttonCenter}>
+                        <Link to='/'>
+                            <button>Lista de Productos</button>
+                        </Link>
+                    </div>                    
+                </div>
+            </Modal>
             <Modal isOpen={isOpenModalBuy} closeModal={closeModalBuy}>
             {preferenceId && 
                 <div className={style.modal}>
