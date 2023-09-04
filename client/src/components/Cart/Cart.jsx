@@ -10,7 +10,8 @@ import Modal from '../Modal/Modal';
 import { useModal } from '../../hooks/useModal';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-const URL = 'http://localhost:3001';
+import { URL } from '../../../varGlobal';
+
 
 const Cart = () =>{
 

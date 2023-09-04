@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { foundProducts, initialFilterProducts } from '../../redux/productSlice';
-const URL = 'http://localhost:3001';
+import { URL } from '../../../varGlobal';
+
 
 const NavBar = () => {
 

@@ -4,7 +4,7 @@ import { addProducts } from './redux/productSlice';
 import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Home from './views/Home/Home'
-const URL = 'http://localhost:3001';
+import { URL } from '../varGlobal';
 
 
 function App() {
