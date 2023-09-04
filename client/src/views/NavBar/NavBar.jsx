@@ -3,12 +3,14 @@ import {FaShoppingCart,FaList,FaSearch} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { foundProducts, initialFilterProducts } from '../../redux/productSlice';
 const URL = 'http://localhost:3001';
 
 const NavBar = () => {
+
+    const cartQuantitySG = useSelector((state)=>state.cart.quantity);
 
     const[input,setInput]=useState('');
 
@@ -83,6 +85,7 @@ const NavBar = () => {
                     </Link>
                 </div>
                 <div className={style.cart}>
+                    <h3>{cartQuantitySG}</h3>
                     <Link to='/cart'>
                         <FaShoppingCart 
                             className={style.icon}

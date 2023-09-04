@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import style from './Cart.module.css';
 import { useEffect, useState } from 'react';
 import ProductItemCart from '../ProductItemCart/ProductItemCart';
-import { clearCart } from '../../redux/cartSlice';
+import { clearCart, setQuantityCart } from '../../redux/cartSlice';
 import {FaCartArrowDown} from 'react-icons/fa';
 
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';//?AGREGO POR MERCADOPAGO
@@ -34,6 +34,7 @@ const Cart = () =>{
         setQuantity(count);
         amount = parseFloat(amount.toFixed(2));
         setAmount(amount);
+        dispatch(setQuantityCart(count))
     };
     const dispatch=useDispatch();
 

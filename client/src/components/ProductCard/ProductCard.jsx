@@ -48,7 +48,7 @@ const ProductCard = ({data}) =>{
             <Modal isOpen={isOpenModalProduct} closeModal={closeModalProduct}>
                 <div>
                     <div>
-                        <img src={image} className='cursor-pointer'/>
+                        <img src={image}/>
                     </div>
                     <h1 className='text-lg font-bold text-center'>{`${title}`}</h1>
                     <h3 className='text-left text-sm'>{description}</h3>
