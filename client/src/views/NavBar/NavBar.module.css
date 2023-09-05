@@ -61,3 +61,15 @@
     width: 25px;
     height: 25px;
 }
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 0rem .5rem;
+    }
+    .input{
+        width: 10rem;
+    }
+    .icon{
+        margin-left: 5px;
+    }
+}
