@@ -141,3 +141,27 @@
     color: white;
     font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 0 1rem;
+    }
+    .containerBottom{
+        /* border: 1px solid green; */
+        flex-direction: column-reverse;
+        overflow-y: auto;
+    }
+    .right{
+        /* border: 1px solid violet; */
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .left{
+        width: 100%;
+        padding: 0;
+        overflow-y: initial;
+    }
+    .resumeTotal{
+        padding-top: 0;
+    }
+}

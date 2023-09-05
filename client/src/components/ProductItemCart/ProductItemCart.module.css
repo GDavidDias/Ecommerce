@@ -101,3 +101,23 @@
     /* border: 1px solid grey; */
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .subtotal{
+        padding: 5px 2px;
+    }
+    .cantidad{
+        justify-content: center;
+    }
+    .iconSuma{
+        /* border: 1px solid blue; */
+        width: 30%;
+    }
+    .iconResta{
+        width: 30%;
+    }
+    .buttons{
+        /* border: 1px solid black; */
+        width: 6vw;
+    }
+}
