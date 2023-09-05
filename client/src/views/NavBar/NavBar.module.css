@@ -11,7 +11,7 @@
     text-align: -webkit-center;
 }
 .searchBar{
-    width: 70vw;
+    width: 60vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,4 +53,8 @@
     height: 2rem;
     width: 2rem;
     background-color: #F2F2F2;
+}
+.quantity{
+    width: 10vw;
+    text-align: -webkit-center;
 }

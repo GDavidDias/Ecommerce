@@ -85,8 +85,10 @@ const NavBar = () => {
                         />
                     </Link>
                 </div>
-                <div className={style.cart}>
+                <div className={style.quantity}>
                     <h3>{cartQuantitySG}</h3>
+                </div>
+                <div className={style.cart}>
                     <Link to='/cart'>
                         <FaShoppingCart 
                             className={style.icon}
