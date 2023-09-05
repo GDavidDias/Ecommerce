@@ -50,6 +50,8 @@
 .quantity{
     width: 10vw;
     text-align: -webkit-center;
+    display: flex;
+    justify-content: right;
 }
 .quantity h3{
     color: #F2F2F2;
