@@ -24,6 +24,9 @@
     /* border: 1px solid green; */
     width: 55%;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .titleInfo{
     display: flex;
