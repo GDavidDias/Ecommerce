@@ -79,6 +79,16 @@ const Cart = () =>{
         recorreProductos();
     },[cartSG])
 
+    useEffect(()=>{
+        const handleBeforeUnload = (e) =>{
+            e.preventDefault();
+        };
+        window.addEventListener('beforeunload',handleBeforeUnload);
+        return () =>{
+            window.removeEventListener('beforeunload',handleBeforeUnload);
+        };
+    },[])
+
     return(
         <>
             <div className={style.container}>
