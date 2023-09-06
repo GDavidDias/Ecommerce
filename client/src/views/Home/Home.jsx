@@ -10,12 +10,12 @@ const Home = () =>{
     return(
         <>
             <div className={style.navBar}>
-                {location.pathname!=='/' ?<NavBar/> :null}
-                {/* <NavBar/> */}
+                {/* {location.pathname!=='/' ?<NavBar/> :null} */}
+                <NavBar/>
             </div>
             <div className={style.body}>
                 <Routes>
-                    <Route exact path="/listProducts" element={<ListProducts/>} />
+                    <Route exact path="/" element={<ListProducts/>} />
                     <Route exact path="/cart" element={<Cart/>}/>
                 </Routes>
             </div>
