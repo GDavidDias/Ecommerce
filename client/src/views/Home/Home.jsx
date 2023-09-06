@@ -13,8 +13,8 @@ const Home = () =>{
             </div>
             <div className={style.body}>
                 <Routes>
-                    <Route path="/" element={<ListProducts/>} />
-                    <Route path="/cart" element={<Cart/>}/>
+                    <Route exact path="/" element={<ListProducts/>} />
+                    <Route exact path="/cart" element={<Cart/>}/>
                 </Routes>
             </div>
             <div className={style.footer}>
