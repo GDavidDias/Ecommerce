@@ -148,7 +148,7 @@
     }
     .containerBottom{
         /* border: 1px solid green; */
-        flex-direction: column-reverse;
+        flex-direction: column;
         overflow-y: auto;
     }
     .right{
