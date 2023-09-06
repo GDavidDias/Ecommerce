@@ -82,6 +82,7 @@ const Cart = () =>{
     useEffect(()=>{
         const handleBeforeUnload = (e) =>{
             e.preventDefault();
+            e.returnValue = '¿Estas seguro de perder los datos?';
         };
         window.addEventListener('beforeunload',handleBeforeUnload);
         return () =>{
