@@ -16,7 +16,7 @@ const Home = () =>{
             </div>
             <div className={style.body}>
                 <Routes>
-                    <Route exact path="/listProducts" element={<ListProducts/>} />
+                    <Route exact path="/marketProducts" element={<ListProducts/>} />
                     <Route exact path="/cart" element={<Cart/>}/>
                     <Route exact path="/" element={<Landing/>}/>
                 </Routes>

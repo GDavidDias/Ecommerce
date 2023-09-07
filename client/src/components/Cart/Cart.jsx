@@ -151,7 +151,7 @@ const Cart = () =>{
                         <FaCartArrowDown className={style.icon}/>
                     </div>
                     <div className={style.buttonCenter}>
-                        <Link to='/listProducts'>
+                        <Link to='/marketProducts'>
                             <button>Lista de Productos</button>
                         </Link>
                     </div>                    
