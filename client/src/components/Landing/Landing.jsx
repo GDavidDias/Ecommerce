@@ -8,7 +8,7 @@ const Landing = () => {
                     >Bienvenidos a la Tienda Virtual</h1>
                 </div>
                 <div className="flex justify-center mt-2">
-                    <Link to={'/marketProducts'}>
+                    <Link to={'/home'}>
                         <button 
                             className="bg-orange hover:bg-blue text-white font-bold w-40 h-8"
                         >Ingresar</button>

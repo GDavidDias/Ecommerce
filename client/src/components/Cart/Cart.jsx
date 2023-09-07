@@ -11,6 +11,7 @@ import { useModal } from '../../hooks/useModal';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { URL } from '../../../varGlobal';
+import { setPage } from '../../redux/pageSlice';
 
 
 const Cart = () =>{
@@ -41,7 +42,11 @@ const Cart = () =>{
 
     const handleclearCart=()=>{
         dispatch(clearCart());
-    }
+    };
+
+    const handlePage = (value) =>{
+        dispatch(setPage(value));
+    };
 
     const createPreference = async (title,price) =>{
         console.log('que tiene title: ', title)
@@ -151,9 +156,11 @@ const Cart = () =>{
                         <FaCartArrowDown className={style.icon}/>
                     </div>
                     <div className={style.buttonCenter}>
-                        <Link to='/marketProducts'>
-                            <button>Lista de Productos</button>
-                        </Link>
+                        {/* <Link to='/marketProducts'> */}
+                            <button
+                                onClick={()=>handlePage('marketProducts')}
+                            >Lista de Productos</button>
+                        {/* </Link> */}
                     </div>                    
                 </div>
             </Modal>

@@ -5,21 +5,34 @@ import NavBar from "../NavBar/NavBar";
 import style from './Home.module.css';
 import Cart from "../../components/Cart/Cart";
 import Landing from "../../components/Landing/Landing";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setPage } from "../../redux/pageSlice";
 
 const Home = () =>{
-    const location = useLocation();
+    const pageSG = useSelector((state)=>state.page.page);
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        console.log("en que pagina esta: ", pageSG)
+    },[pageSG])
+    
+    useEffect(()=>{
+        //?INICIA CON PAGINA -> marketProducts
+        dispatch(setPage('marketProducts'))
+    },[])
+
     return(
         <>
             <div className={style.navBar}>
-                {location.pathname!=='/' ?<NavBar/> :null}
-                {/* <NavBar/> */}
+                <NavBar/>
             </div>
             <div className={style.body}>
-                <Routes>
-                    <Route exact path="/marketProducts" element={<ListProducts/>} />
-                    <Route exact path="/cart" element={<Cart/>}/>
-                    <Route exact path="/" element={<Landing/>}/>
-                </Routes>
+                {pageSG==='marketProducts'
+                    ?<ListProducts/>
+                    :<Cart/>
+                }
+
             </div>
             <div className={style.footer}>
                 <Footer/>

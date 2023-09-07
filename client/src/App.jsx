@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Home from './views/Home/Home'
 import { URL } from '../varGlobal';
+import { Route, Routes } from 'react-router-dom';
+import Landing from './components/Landing/Landing';
 
 
 function App() {
@@ -30,7 +32,10 @@ function App() {
   return (
     <>
       <div>
-        <Home/>
+        <Routes>
+          <Route path='/' element={<Landing/>}/>
+          <Route path='/home' element={<Home/>}/>
+        </Routes>
       </div>
     </>
   )

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { foundProducts, initialFilterProducts } from '../../redux/productSlice';
 import { URL } from '../../../varGlobal';
+import { setPage } from '../../redux/pageSlice';
 
 
 const NavBar = () => {
@@ -52,6 +53,10 @@ const NavBar = () => {
         dispatch(initialFilterProducts());
     };
 
+    const handlePage = (value) =>{
+        dispatch(setPage(value));
+    };
+
     useEffect(()=>{
         console.log('que tiene input: ', input);
     },[input])
@@ -79,21 +84,23 @@ const NavBar = () => {
                     />
                 </div>
                 <div className={style.list}>
-                    <Link to='/marketProducts'>
+                    {/* <Link to='/marketProducts'> */}
                         <FaList
                             className={style.icon}
+                            onClick={()=>handlePage('marketProducts')}
                         />
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className={style.quantity}>
                     <h3>{cartQuantitySG}</h3>
                 </div>
                 <div className={style.cart}>
-                    <Link to='/cart'>
+                    {/* <Link to='/cart'> */}
                         <FaShoppingCart 
                             className={style.icon}
+                            onClick={()=>handlePage('cart')}
                         />
-                    </Link>
+                    {/* </Link> */}
                 </div>
             </div>
         </>
