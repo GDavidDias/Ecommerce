@@ -9,7 +9,7 @@ const router = Router();
 
 //configurar los routers
 router.get('/products',listProducts);
-router.get('/search/',searchProducts);
+router.get('/search',searchProducts);
 
 //?AGREGO POR MERCADOPAGO
 router.post('/create_preference',preferenceMp);
