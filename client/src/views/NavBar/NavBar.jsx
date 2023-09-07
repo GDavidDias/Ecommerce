@@ -79,7 +79,7 @@ const NavBar = () => {
                     />
                 </div>
                 <div className={style.list}>
-                    <Link to='/'>
+                    <Link to='/listProducts'>
                         <FaList
                             className={style.icon}
                         />

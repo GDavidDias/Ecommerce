@@ -79,16 +79,6 @@ const Cart = () =>{
         recorreProductos();
     },[cartSG])
 
-    useEffect(()=>{
-        const handleBeforeUnload = (e) =>{
-            e.preventDefault();
-            e.returnValue = '¿Estas seguro de perder los datos?';
-        };
-        window.addEventListener('beforeunload',handleBeforeUnload);
-        return () =>{
-            window.removeEventListener('beforeunload',handleBeforeUnload);
-        };
-    },[])
 
     return(
         <>
@@ -161,7 +151,7 @@ const Cart = () =>{
                         <FaCartArrowDown className={style.icon}/>
                     </div>
                     <div className={style.buttonCenter}>
-                        <Link to='/'>
+                        <Link to='/listProducts'>
                             <button>Lista de Productos</button>
                         </Link>
                     </div>                    
