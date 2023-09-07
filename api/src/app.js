@@ -1,4 +1,6 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const{ TOKEN_MP } = process.env;
@@ -12,6 +14,9 @@ const server = express();
 server.name='API';
 
 //!Configuramos los middlewares - los filtros de las request
+server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
+server.use(bodyParser.json({ limit: '50mb' }));
+server.use(cookieParser());
 server.use(morgan('dev'));
 server.use(express.json()); //?AGREGO POR MERCADOPAGO
 server.use(cors()); //?AGREGO POR MERCADOPAGO
