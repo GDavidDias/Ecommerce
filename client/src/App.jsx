@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Home from './views/Home/Home'
 import { URL } from '../varGlobal';
-import { HashRouter, Route, Routes ,Switch} from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 
 
