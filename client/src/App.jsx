@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Home from './views/Home/Home'
 import { URL } from '../varGlobal';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 
 
@@ -30,18 +30,12 @@ function App() {
   },[]);
 
   return (
-    <>
-      <div>
-        {/* <Routes> */}
-          <HashRouter>
-            <Routes>
-              <Route path='/' element={<Landing/>}/>
-              <Route path='/home' element={<Home/>}/>
-            </Routes>
-          </HashRouter>
-        {/* </Routes> */}
-      </div>
-    </>
+    <div>
+        <Routes>
+          <Route path='/' element={<Landing/>}/>
+          <Route path='/home' element={<Home/>}/>
+        </Routes>
+    </div>
   )
 };
 
