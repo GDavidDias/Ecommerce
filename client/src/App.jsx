@@ -34,10 +34,10 @@ function App() {
       <div>
         {/* <Routes> */}
           <HashRouter>
-            <Switch>
+            <Routes>
               <Route path='/' element={<Landing/>}/>
               <Route path='/home' element={<Home/>}/>
-            </Switch>
+            </Routes>
           </HashRouter>
         {/* </Routes> */}
       </div>
