@@ -34,8 +34,10 @@ function App() {
       <div>
         {/* <Routes> */}
           <HashRouter>
-            <Route path='/' element={<Landing/>}/>
-            <Route path='/home' element={<Home/>}/>
+            <Switch>
+              <Route path='/' element={<Landing/>}/>
+              <Route path='/home' element={<Home/>}/>
+            </Switch>
           </HashRouter>
         {/* </Routes> */}
       </div>
