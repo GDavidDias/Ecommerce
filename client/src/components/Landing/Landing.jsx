@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
     return (
-            <div className="h-80 flex flex-col justify-center">
+            <div className="h-screen flex flex-col justify-center bg-green">
                 <div>
                     <h1 className="text-2xl font-bold text-center"
                     >Bienvenidos a la Tienda Virtual</h1>
