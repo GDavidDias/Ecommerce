@@ -819,6 +819,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: #85A0F2;
 }
+.hover\:bg-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: #4BF286;
+}
 .max-w-xs{
   max-width: 20rem; /* 320px */
 }
@@ -880,3 +884,4 @@ video {
 .mt-2{
   margin-top: 2rem;
 }
+

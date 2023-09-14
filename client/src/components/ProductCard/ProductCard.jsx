@@ -26,10 +26,11 @@ const ProductCard = ({data}) =>{
 
     return(
         <>
-            <div className='bg-white w-48 h-64 border-2 border-slate-400 flex flex-col items-center gap-1 bg-clip-content'>
+            <div className='bg-white w-48 h-64 border-2 border-slate-200 flex flex-col items-center gap-1 bg-clip-content'>
 
-                <div className={style.containerImage}>
-                    <img src={image} onClick={handleImage}/>
+                {/* <div className={style.containerImage}> */}
+                <div className='w-48 h-32 flex items-center justify-center position-relative'>
+                    <img src={image} onClick={handleImage} className='w-full h-full position-absolute'/>
                 </div>
                 <h1 className='text-lg font-bold text-center truncate'>{`${title}`}</h1>
                 <div className='max-w-xxs  overflow-hidden pl-2 pr-2 w-48 h-5'>
