@@ -1,16 +1,21 @@
 import style from './NavBar.module.css';
-import {FaShoppingCart,FaList,FaSearch} from 'react-icons/fa';
+import {FaShoppingCart,FaList,FaSearch,FaPlusSquare,FaUserAlt} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { foundProducts, initialFilterProducts } from '../../redux/productSlice';
 import { URL } from '../../../varGlobal';
 import { setPage } from '../../redux/pageSlice';
+import user from '../../../src/img/user.png';
+import edit from '../../../src/img/edit.png'
+import logout from '../../../src/img/log-out.png'
 
 
 const NavBar = () => {
+
+    const[open, setOpen] = useState(false);
 
     const cartQuantitySG = useSelector((state)=>state.cart.quantity);
 
@@ -60,10 +65,26 @@ const NavBar = () => {
     useEffect(()=>{
         console.log('que tiene input: ', input);
     },[input])
+
+    let menuRef = useRef();
+
+    useEffect(()=>{
+        let handler = (e)=>{
+            if(!menuRef.current.contains(e.target)){
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown',handler);
+
+        return()=>{
+            document.removeEventListener('mousedown',handler);
+        }
+    });
     
     return(
         <>
-            <div className={style.container}>
+            <div className={style.containerTop}>
                 <div className={style.logo}>
                     <img src={logo}/>
                 </div>
@@ -84,27 +105,47 @@ const NavBar = () => {
                     />
                 </div>
                 <div className={style.list}>
-                    {/* <Link to='/marketProducts'> */}
                         <FaList
                             className={style.icon}
                             onClick={()=>handlePage('marketProducts')}
                         />
-                    {/* </Link> */}
                 </div>
                 <div className={style.quantity}>
                     <h3>{cartQuantitySG}</h3>
                 </div>
                 <div className={style.cart}>
-                    {/* <Link to='/cart'> */}
                         <FaShoppingCart 
                             className={style.icon}
                             onClick={()=>handlePage('cart')}
                         />
-                    {/* </Link> */}
+                </div>
+            </div>
+            <div className={style.containerBottom} ref={menuRef}>
+                <div className={style.menu}>
+                    <FaUserAlt className={style.icon} onClick={()=>{setOpen(!open)}}/>
+                </div>
+                <div 
+                    className={`${style.dropdownMenu} ${open ?style.active :style.inactive}`}
+                >
+                    <ul>
+                        <DropdownItem img={user} text={'Mi Perfil'}/>
+                        <DropdownItem img={edit} text={'Mis Productos'}/>
+                        <DropdownItem img={logout} text={'Salir'}/>
+                    </ul>
+
                 </div>
             </div>
         </>
     )
 };
+
+function DropdownItem(props){
+    return(
+        <li className={style.dropdownItem}>
+            <img src={props.img}></img>
+            <a>{props.text}</a>
+        </li>
+    );
+}
 
 export default NavBar;
