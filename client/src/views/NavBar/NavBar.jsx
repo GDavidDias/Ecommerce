@@ -120,7 +120,7 @@ const NavBar = () => {
                         />
                 </div>
             </div>
-            <div className={style.containerBottom} ref={menuRef}>
+            {/* <div className={style.containerBottom} ref={menuRef}>
                 <div className={style.menu}>
                     <FaUserAlt className={style.icon} onClick={()=>{setOpen(!open)}}/>
                 </div>
@@ -134,7 +134,7 @@ const NavBar = () => {
                     </ul>
 
                 </div>
-            </div>
+            </div> */}
         </>
     )
 };
