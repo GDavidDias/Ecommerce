@@ -7,7 +7,7 @@ body{
 }
 .body{
     /* border: 1px solid black; */
-    min-height: 80vh;
+    max-height: 78vh;
 }
 .footer{
     /* border: 1px solid blue; */

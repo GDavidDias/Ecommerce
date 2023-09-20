@@ -35,6 +35,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 console.log(sequelize.models);
 //const { Recipe , Diet } = sequelize.models;
 const {Products} = sequelize.models;
+const {User} = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);

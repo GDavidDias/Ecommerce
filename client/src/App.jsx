@@ -7,6 +7,7 @@ import Home from './views/Home/Home'
 import { URL } from '../varGlobal';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
+import style from './App.module.css';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
   },[]);
 
   return (
-    <div>
+    <div className={style.containerMain}>
         <Routes>
           <Route path='/' element={<Landing/>}/>
           <Route path='/home' element={<Home/>}/>
