@@ -1,5 +1,5 @@
 const {User} = require('../db.js');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const createUser = async function(req,res){
     const {username,name,password} = req.body;
