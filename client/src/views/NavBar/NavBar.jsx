@@ -1,6 +1,6 @@
 import style from './NavBar.module.css';
 import {FaShoppingCart,FaList,FaSearch,FaPlusSquare,FaUserAlt} from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,9 +11,11 @@ import { setPage } from '../../redux/pageSlice';
 import user from '../../../src/img/user.png';
 import edit from '../../../src/img/edit.png'
 import logout from '../../../src/img/log-out.png'
+import { outUser } from '../../redux/userSlice';
 
 
 const NavBar = () => {
+    const userSG = useSelector((state)=>state.user);
 
     const[open, setOpen] = useState(false);
 
@@ -27,6 +29,7 @@ const NavBar = () => {
     };
     
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const searchData = async(value) => {
         try{
@@ -60,6 +63,11 @@ const NavBar = () => {
 
     const handlePage = (value) =>{
         dispatch(setPage(value));
+    };
+
+    const handleLogout = () =>{
+        dispatch(outUser());
+        navigate('/');
     };
 
     useEffect(()=>{
@@ -121,7 +129,9 @@ const NavBar = () => {
                 </div>
             </div>
             <div className={style.containerBottom} ref={menuRef}>
-                
+                <div className={style.nameUser}>
+                    <p>{userSG.name ?userSG.name :"invitado" }</p>
+                </div>
                 <div className={style.menu}>
                     <FaUserAlt className={style.icon} onClick={()=>{setOpen(!open)}}/>
                 </div>
@@ -129,9 +139,21 @@ const NavBar = () => {
                     className={`${style.dropdownMenu} ${open ?style.active :style.inactive}`}
                 >
                     <ul>
-                        <DropdownItem img={user} text={'Mi Perfil'}/>
-                        <DropdownItem img={edit} text={'Mis Productos'}/>
-                        <DropdownItem img={logout} text={'Salir'}/>
+                        <DropdownItem 
+                            img={user} 
+                            text={'Mi Perfil'}
+                            onClick={()=>handlePage('profile')}
+                        />
+                        <DropdownItem 
+                            img={edit} 
+                            text={'Mis Productos'}
+                            onClick={()=>handlePage('userProducts')}
+                        />
+                        <DropdownItem 
+                            img={logout} 
+                            text={'Salir'}
+                            onClick={()=>handleLogout()}
+                        />
                     </ul>
 
                 </div>
@@ -142,7 +164,7 @@ const NavBar = () => {
 
 function DropdownItem(props){
     return(
-        <li className={style.dropdownItem}>
+        <li className={style.dropdownItem} onClick={props.onClick}>
             <img src={props.img}></img>
             <a>{props.text}</a>
         </li>

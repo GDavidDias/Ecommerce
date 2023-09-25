@@ -79,6 +79,9 @@
     padding: 0rem 1.5rem;
     justify-content: end;
 }
+.nameUser{
+    color: #F2F2F2;
+}
 .menu{
     width: 9vw;
     cursor: pointer;
