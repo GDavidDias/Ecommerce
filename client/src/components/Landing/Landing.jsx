@@ -40,11 +40,12 @@ const Landing = () => {
                 dispatch(setUser(
                     {username:res.data.username, 
                      name:res.data.name,
-                     id:res.data.id
+                     id:res.data.id,
+                     token:res.data.token,
                     }
                     ));
-                document.cookie = `token=${res.data.token};max-age${60*3}; path=/; samesite=strict`;
-                console.log('que tiene cookie: ', document.cookie);
+                //document.cookie = `token=${res.data.token};max-age=${60*3}; path=/; samesite=strict`;
+                //console.log('que tiene cookie: ', document.cookie);
                 navigate('/home');
             })
             .catch(error=>{

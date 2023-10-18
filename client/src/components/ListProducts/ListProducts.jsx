@@ -5,7 +5,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import style from './ListProducts.module.css'
 
 const ListProducts = () => {
-
+    console.log('Entra a ListProducts')
     const productSG = useSelector((state)=>state.products.filterProducts);
 
     useEffect(()=>{

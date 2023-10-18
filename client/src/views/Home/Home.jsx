@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
 import style from './Home.module.css';
 import Cart from "../../components/Cart/Cart";
-import UserProducts from "../../components/Products/UserProducts";
+import UserProducts from "../../components/userProducts/UserProducts";
 import Profile from "../../components/Profile/Profile";
 import Landing from "../../components/Landing/Landing";
 import { useDispatch, useSelector } from "react-redux";

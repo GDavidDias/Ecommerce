@@ -11,6 +11,7 @@ const verificaUserName = async(nombreUsuario) =>{
 };
 
 const editProfile = async function(req,res){
+    console.log('Entra a editProfile')
     const {username,name,password} = req.body;
     const {id} = req.params;
 

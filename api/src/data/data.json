@@ -4,43 +4,57 @@
             "image":"https://images.unsplash.com/photo-1605733513549-de9b150bd70d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"zapatos de cuero",
             "description":"zapatos de cuero negro de reptil con tacos altos y cierre en la parte externa.",
-            "price":"3.7"
+            "price":"3.7",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"remera negra",
             "description":"remera de algodon negra con estampado",
-            "price":"7"
+            "price":"7",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80",
             "title":"pantalon de jean",
             "description":"pantalon jean de varios colores",
-            "price":"1.8"
+            "price":"1.8",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://images.unsplash.com/photo-1603252110971-b8a57087be18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"camisa de vestir",
             "description":"camisa manga larga color celeste con cuello",
-            "price":"8.9"
+            "price":"8.9",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://plus.unsplash.com/premium_photo-1661413202706-37ac4f98e68b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"media infantil",
             "description":"media infantil varios motivos",
-            "price":"8"
+            "price":"8",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://images.unsplash.com/photo-1551974222-1d49f576a2a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"mochila notebook",
             "description":"mochila de tela para notebook",
-            "price":"4.6"
+            "price":"4.6",
+            "stock":"10",
+            "available":"true"
         },
         {
             "image":"https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
             "title":"gorra gris",
             "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia veniam iusto, odit esse rem hic voluptas dolorum velit qui ea cum assumenda tenetur, est fugiat fuga!",
-            "price":"2.5"
+            "price":"2.5",
+            "stock":"10",
+            "available":"true"
         }
     ]
 }

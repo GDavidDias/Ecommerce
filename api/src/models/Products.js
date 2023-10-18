@@ -15,7 +15,7 @@ module.exports = (sequelize) =>{
         },
         image:{
             type:DataTypes.STRING,
-            defaultValue:'https://cdn-icons-png.flaticon.com/512/1493/1493693.png'
+            allowNull:false,
         },
         description:{
             type:DataTypes.STRING,
@@ -23,6 +23,14 @@ module.exports = (sequelize) =>{
         },
         price:{
             type:DataTypes.DECIMAL,
+            allowNull:false,
+        },
+        stock:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+        },
+        available:{
+            type:DataTypes.BOOLEAN,
             allowNull:false,
         }
     })

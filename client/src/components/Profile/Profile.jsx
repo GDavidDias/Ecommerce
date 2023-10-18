@@ -35,7 +35,7 @@ const Profile = ()=>{
         console.log('presiono submit en Profile');
         //?SI INICIO SESION, MODIFICA LOS DATOS.
         if(userSG.name){
-            await axios.put(`${URL}/editProfile/${userSG.id}`,userData)
+            await axios.put(`${URL}/editProfile/${userSG.id}`,userData,{headers:{'Authorization':userSG.token}})
             .then(async res=>{
                 console.log('que tiene res.data: ', res.data);
                 editOpenModal();

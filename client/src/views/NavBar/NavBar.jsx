@@ -11,7 +11,7 @@ import { setPage } from '../../redux/pageSlice';
 import user from '../../../src/img/user.png';
 import edit from '../../../src/img/edit.png'
 import logout from '../../../src/img/log-out.png'
-import { outUser } from '../../redux/userSlice';
+import { outUser, setProducts } from '../../redux/userSlice';
 
 
 const NavBar = () => {
@@ -67,7 +67,10 @@ const NavBar = () => {
 
     const handleLogout = () =>{
         dispatch(outUser());
+        dispatch(setProducts([]));
+        //document.cookie = 'token=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/';
         navigate('/');
+        console.log('que tienen cookie: ', document.cookie);
     };
 
     useEffect(()=>{

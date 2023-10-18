@@ -8,26 +8,19 @@ import { URL } from '../varGlobal';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 import style from './App.module.css';
+import { fetchAllProducts } from './utils/fetchAllProducts';
 
 
 function App() {
   const dispatch = useDispatch();
+
+  const getAllProducts = async() => {
+    const data = await fetchAllProducts()
+    dispatch(addProducts(data))
+  };
+
   useEffect(()=>{
-    const fetchdata = async () =>{
-      try{
-        // const response = dataJson;
-        // console.log('que tiene response: ', response)
-        // dispatch(addProducts(response));
-        const {data} = await axios.get(`${URL}/products`);
-        console.log("que tiene data: ", data)
-        dispatch(addProducts(data));
-
-      }catch(error){
-        console.log('error al cargar datos: ', error.message)
-      }
-    };
-    fetchdata();
-
+    getAllProducts();
   },[]);
 
   return (
